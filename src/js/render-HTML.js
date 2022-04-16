@@ -1,5 +1,5 @@
 import Notiflix from 'notiflix';
-// import SimpleLightbox from 'simplelightbox';
+import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export default function renderCards(r, page) {
@@ -36,5 +36,5 @@ export default function renderCards(r, page) {
 function makaCards(h) {
   const gallery = document.querySelector('.gallery');
   gallery.insertAdjacentHTML('beforeend', h.join(''));
-  // new SimpleLightbox(".gallery a");
+  new SimpleLightbox('.gallery a');
 }
