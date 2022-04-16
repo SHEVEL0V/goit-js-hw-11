@@ -24,13 +24,14 @@ input{
 .sunmit-btn{
     position: absolute;
     right: 42%;
-    width: 28px;
+    width: 38px;
     height: 28px;
-    border-radius: 50%;
+    border-radius: 40%;
     border: 1px ,solid ,black;
 
-    font-size: 20px;
-    background-color: rgb(252, 253, 231);
+    font-size: 14px;
+    text-align: center;
+    background-color: rgb(163, 229, 242);
 }
 
 .load-more{
@@ -38,7 +39,7 @@ input{
     margin-left: auto;
     margin-right: auto;
     border: 0;
-    border-radius: 30;
+    border-radius: 13px;
     width: 200px;
     height: 50px;
     background-color: rgb(179, 179, 217);

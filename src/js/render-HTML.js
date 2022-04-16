@@ -1,21 +1,13 @@
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
+let qty = 0;
 export default function renderCards(r, page) {
   const htmlArey = [];
   const dataArey = r.data.hits;
   const total = r.data.total;
-  if (page === 1 && total !== 0) {
-    Notiflix.Notify.info(`Hooray! We found ${total} images.`);
-    document.querySelector('.load-more ').classList.remove('none-btn');
-  }
-  if (total === 0) {
-    Notiflix.Notify.failure(
-      'Sorry, there are no images matching your search query. Please try again.',
-    );
-    document.querySelector('.load-more ').classList.add('none-btn');
-  }
+  const btnCl = document.querySelector('.load-more ').classList;
+
   dataArey.map(el => {
     const { webformatURL, largeImageURL, tags, likes, views, comments, downloads } = el;
 
@@ -30,7 +22,26 @@ export default function renderCards(r, page) {
         </div>
       </div>`);
   });
+
   makaCards(htmlArey);
+
+  if (page === 1 && total !== 0) {
+    Notiflix.Notify.info(`Hooray! We found ${total} images.`);
+    btnCl.remove('none-btn');
+  }
+
+  if (total === 0) {
+    Notiflix.Notify.failure(
+      'Sorry, there are no images matching your search query. Please try again.',
+    );
+    btnCl.add('none-btn');
+  }
+  qty += htmlArey.length;
+
+  if (qty === total) {
+    Notiflix.Notify.warning("We're sorry, but you've reached the end of search results.");
+    btnCl.add('none-btn');
+  }
 }
 
 function makaCards(h) {
