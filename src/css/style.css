@@ -1,0 +1,77 @@
+body{
+    background-color: rgb(236, 230, 222);
+}
+
+.section{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1280px;
+}
+.search-form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: rgb(122, 122, 195);
+}
+
+input{
+    width: 200px;
+    height: 25px;
+}
+.sunmit-btn{
+    position: absolute;
+    right: 42%;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px ,solid ,black;
+
+    font-size: 20px;
+    background-color: rgb(252, 253, 231);
+}
+
+.load-more{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    border-radius: 30;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(179, 179, 217);
+
+    font-size: 14px;
+}
+.load-more p {
+    font-size: 24px;
+}
+
+.none-btn{
+    display: none;
+}
+
+
+.gallery{
+    
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.photo-card{
+    margin: 10px;
+    display: block;
+}
+.info{
+    display: flex;
+
+}
+.info-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 5px;
+}
