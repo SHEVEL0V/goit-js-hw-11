@@ -1,22 +1,22 @@
 {
-  "name": "test",
+  "name": "goit-js-hw-11",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://SHEVEL0V.github.io/test",
+  "homepage": "https://SHEVEL0V.github.io/goit-js-hw-11",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /test"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-11"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SHEVEL0V/test.git"
+    "url": "git+https://github.com/SHEVEL0V/goit-js-hw-11.git"
   },
   "keywords": [],
   "author": "shevelov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/SHEVEL0V/test.git/issues"
+    "url": "https://github.com/goitacademy/SHEVEL0V/goit-js-hw-11.git/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
