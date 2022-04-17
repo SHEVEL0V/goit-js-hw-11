@@ -80,4 +80,4 @@ var t=arguments[3];function e(t){return(e="function"==typeof Symbol&&"symbol"==t
 },{"./fech":"whRC"}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/input-form");
 },{"./js/input-form":"s9O1"}]},{},["Focm"], null)
-//# sourceMappingURL=/test/src.e1cccd6f.js.map
+//# sourceMappingURL=/goit-js-hw-11/src.e1cccd6f.js.map
