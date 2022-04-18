@@ -1,24 +1,25 @@
-import fechApi from "./fech";
+import fechApi from './fech';
 
-const form = document.querySelector("form");
-form.addEventListener("submit", getValueInput);
+const form = document.querySelector('form');
+form.addEventListener('submit', getValueInput);
+const perPage = 40;
 let page = 1;
-let text = "";
+let text = '';
 
-document.querySelector(".load-more").addEventListener("click", () => {
+document.querySelector('.load-more').addEventListener('click', () => {
   page++;
   onFech();
 });
 
 function getValueInput(e) {
   e.preventDefault();
-  document.querySelector(".gallery").innerHTML = "";
+  document.querySelector('.gallery').innerHTML = '';
 
   const textInput = e.target.searchQuery.value;
 
-  if (textInput === "") {
+  if (textInput.trim() === '') {
     page = 1;
-    document.querySelector(".load-more ").classList.add("none-btn");
+    document.querySelector('.load-more ').classList.add('none-btn');
   } else {
     text = textInput;
     onFech();
@@ -26,7 +27,7 @@ function getValueInput(e) {
 }
 
 function onFech() {
-  fechApi(text, page);
+  fechApi(text, page, perPage);
 }
 
 // window.addEventListener("scroll", () => {

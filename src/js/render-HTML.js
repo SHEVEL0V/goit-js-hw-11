@@ -1,8 +1,8 @@
 import Notiflix from 'notiflix';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-let qty = 0;
-export default function renderCards(r, page) {
+
+export default function renderCards(r, page, perPage) {
   const htmlArey = [];
   const dataArey = r.data.hits;
   const total = r.data.total;
@@ -22,28 +22,24 @@ export default function renderCards(r, page) {
         </div>
       </div>`);
   });
-
-  makaCards(htmlArey);
-
+  if (total !== 0) {
+    makaCards(htmlArey);
+  }
   if (page === 1 && total !== 0) {
     Notiflix.Notify.info(`Hooray! We found ${total} images.`);
     btnCl.remove('none-btn');
   }
-
   if (total === 0) {
     Notiflix.Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.',
     );
     btnCl.add('none-btn');
   }
-  qty += htmlArey.length;
-
-  if (qty === total) {
+  if (total < page * perPage) {
     Notiflix.Notify.warning("We're sorry, but you've reached the end of search results.");
     btnCl.add('none-btn');
   }
 }
-
 function makaCards(h) {
   const gallery = document.querySelector('.gallery');
   gallery.insertAdjacentHTML('beforeend', h.join(''));

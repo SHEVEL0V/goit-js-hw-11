@@ -14,7 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 40px;
-    background-color: rgb(122, 122, 195);
+    background-color: rgb(105, 105, 240);
 }
 
 input{
@@ -24,14 +24,13 @@ input{
 .sunmit-btn{
     position: absolute;
     right: 42%;
-    width: 38px;
+    width: 32px;
     height: 28px;
-    border-radius: 40%;
-    border: 1px ,solid ,black;
+    border: 0;
 
     font-size: 14px;
     text-align: center;
-    background-color: rgb(163, 229, 242);
+    background-color: rgb(206, 210, 211);
 }
 
 .load-more{
